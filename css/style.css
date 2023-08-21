@@ -1,0 +1,31 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+}
+header .navbar .main-logo {
+  width: 25%;
+}
+header .navbar .main-logo img {
+  width: 100%;
+}
+header .navbar .nav-list {
+  display: flex;
+  justify-content: space-betweeen;
+  align-items: center;
+  width: 25%;
+}
+header .navbar .nav-list .nav-item {
+  margin-right: 6%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ababab;
+}
+header .navbar .nav-list .nav-item .about-us-color {
+  color: #00b39b;
+}/*# sourceMappingURL=style.css.map */

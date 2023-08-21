@@ -1,0 +1,51 @@
+@import 'variables';
+
+//FONTS
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+// MIXINS
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin flexRow($justifyContent) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: center;
+}
+@mixin flexCol($alignItems) {
+    display: flex;
+    justify-content: center;
+    align-items: $alignItems;
+}
+
+//HEADER
+header .navbar {
+    @include flexRow(space-around);
+    margin-top: 2%;
+    .main-logo {
+        width: 25%;
+        img {
+            width: 100%;
+        }
+    }
+    .nav-list {
+        @include flexRow(space-betweeen);
+        width: 25%;
+        .nav-item {
+            margin-right: 6%;
+            font-size: 16px;
+            font-weight: 400;
+            color: $primaryColor2;
+            .about-us-color {
+                color: $primaryColor1;
+            }
+        }
+    }
+}
+
+
