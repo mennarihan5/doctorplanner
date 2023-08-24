@@ -1,8 +1,12 @@
+//VARIABLES
 @import 'variables';
 
+
 //FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800;900&family=Work+Sans:wght@100;200;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap');
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Work Sans, Arial, sans-serif;
 }
 
 // MIXINS
@@ -22,11 +26,11 @@ body {
     justify-content: center;
     align-items: $alignItems;
 }
-
 //HEADER
 header .navbar {
     @include flexRow(space-around);
     margin-top: 2%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     .main-logo {
         width: 25%;
         img {
@@ -41,10 +45,244 @@ header .navbar {
             font-size: 16px;
             font-weight: 400;
             color: $primaryColor2;
+            cursor: pointer;
+            &:hover {
+                color: $primaryColor1;
+            }
             .about-us-color {
                 color: $primaryColor1;
             }
         }
+    }
+}
+
+// SECTION 1
+main .section1 {
+    margin: 7% auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 0.4fr) 1fr;
+    .logo-sm {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        justify-self: center;
+        width: 4%;
+        img {
+            width: 100%;
+        }
+    }
+    .main-title {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        justify-self: center;
+        font-size: 33px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: $primaryColor1;
+    }
+    .main-description {
+        width: 60%;
+        justify-self: center;
+        display: grid;
+        grid-row: 3/4;
+        grid-column: 1/4;
+        font-size: 16px;
+        text-align: justify;
+        color: $mainTextColor;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        .desc1 {
+            grid-column: 2/2;
+            width: 90%;
+            justify-self: center;
+        }
+        .desc2 {
+            grid-column: 3/3;
+            width: 90%;
+            justify-self: center;
+        }
+    }
+}
+// SECTION 2
+.section2 {
+    @include flexRow(space-evenly);
+    width: 90%;
+    margin: 8% auto;
+
+    .card {
+        width: 22%;
+        height: 14em;
+        color: $cardTextColor;
+        font-size: 1.5em;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        border-radius: 0.5em;
+        text-align: start;
+        padding: 4% 2% 0 4%;
+        .card-info {
+            overflow: overlay;
+            h3 {
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+            p {
+                font-size: 0.8em;
+                font-weight: 300;
+                margin-bottom: 30%;
+            }
+            .para-black {
+                margin-bottom: 12%;
+            }
+            #countries {
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 0.8em;
+                font-weight: 400;
+                color: $cardTextColor;
+                transition: all ease-in 0.3s;
+                &:hover {
+                    color: $footerColor1;
+                }
+            }
+            .countries-green {
+                background-color: $card1Color;
+            }
+            .countries-blue {
+                background-color: $card2Color;
+            }
+            .countries-black {
+                background-color: $card3Color;
+                margin-bottom: 5%;
+            }
+        }
+
+    }
+    .green-card {
+        background-color: $card1Color;
+    }
+    .blue-card {
+        background-color: $card2Color;
+    }
+    .black-card {
+        background-color: $card3Color;
+    }
+}
+// SECTION 3
+.section3 {
+    @include flexRow(space-evenly);
+    width: 80%;
+    padding: 0 10%;
+    margin: auto;
+
+    p {
+       width: 25%;
+       color: $primaryColor1;
+       font-size: 1.6em;
+       font-weight: 300;
+       letter-spacing: 0.8px;
+    }
+    .sponsers {
+        @include flexRow(space-evenly);
+        flex-wrap: wrap;
+        width: 30%;
+        .sponsers-logo {
+            width: 23%;
+            margin: 5%;
+            img {
+                width: 100%;
+            }
+        }   
+    } 
+}
+//SECTION 4
+.section4 {
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    grid-template-rows: 4fr;
+    background-color: $backgroundColor;
+    padding: 7% 3%;
+    position: relative;
+    margin-top: 8%;
+    .section4-info {
+        grid-column: 1/2;
+        width: 85%;
+        margin-left: 10%;
+        .info {
+            width: 100%;
+            margin: auto;
+            margin-top: 2%;
+            line-height: 1.4;
+            letter-spacing: 0.8px;
+        }
+        h3 {
+            font-size: 1.8em;
+            font-weight: 300;
+            padding-bottom: 5%;
+            color: $primaryColor1;
+        }
+        p {
+           color: $mainTextColor;
+        }
+        .sect-4-img {
+            width: 97%;
+            img {
+                width: 40%;
+                position: absolute;
+                bottom: 0px;
+            }
+        }
+    }
+    .section4-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: 50px 200px 50px 200px;
+        grid-column: 2/3;
+        grid-row: 1/5;
+        text-align: center;
+        margin: auto;
+        column-gap: 50px;
+        row-gap: 10px;
+        .card {
+            background-color: $cardTextColor;
+            padding: 13% 10%;
+            height: 12em;
+            width: 85%;
+            i {
+                font-size: 1.5em;
+                color: $primaryColor1;
+            }
+            h3 {
+                font-size: 1.6em;
+                font-weight: 300;
+                color: $primaryColor1;
+            }
+            p {
+                font-size: 0.7em;
+                font-weight: 400;
+                color: $mainTextColor;
+            }
+        }
+        .section4-card1 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .section4-card2 {
+            grid-column: 2;
+            grid-row: 1/2;
+        }
+        .section4-card3 {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        .section4-card4 {
+            grid-column: 2;
+            grid-row: 3/4;
+        }
+
+
     }
 }
 

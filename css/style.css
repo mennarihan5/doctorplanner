@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800;900&family=Work+Sans:wght@100;200;300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap");
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Work Sans, Arial, sans-serif;
 }
 
 header .navbar {
@@ -7,6 +9,7 @@ header .navbar {
   justify-content: space-around;
   align-items: center;
   margin-top: 2%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 header .navbar .main-logo {
   width: 25%;
@@ -25,7 +28,242 @@ header .navbar .nav-list .nav-item {
   font-size: 16px;
   font-weight: 400;
   color: #ababab;
+  cursor: pointer;
+}
+header .navbar .nav-list .nav-item:hover {
+  color: #00b39b;
 }
 header .navbar .nav-list .nav-item .about-us-color {
   color: #00b39b;
+}
+
+main .section1 {
+  margin: 7% auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 0.4fr) 1fr;
+}
+main .section1 .logo-sm {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  justify-self: center;
+  width: 4%;
+}
+main .section1 .logo-sm img {
+  width: 100%;
+}
+main .section1 .main-title {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  justify-self: center;
+  font-size: 33px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #00b39b;
+}
+main .section1 .main-description {
+  width: 60%;
+  justify-self: center;
+  display: grid;
+  grid-row: 3/4;
+  grid-column: 1/4;
+  font-size: 16px;
+  text-align: justify;
+  color: #747474;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main .section1 .main-description .desc1 {
+  grid-column: 2/2;
+  width: 90%;
+  justify-self: center;
+}
+main .section1 .main-description .desc2 {
+  grid-column: 3/3;
+  width: 90%;
+  justify-self: center;
+}
+
+.section2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  margin: 8% auto;
+}
+.section2 .card {
+  width: 22%;
+  height: 14em;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  border-radius: 0.5em;
+  text-align: start;
+  padding: 4% 2% 0 4%;
+}
+.section2 .card .card-info {
+  overflow: overlay;
+}
+.section2 .card .card-info h3 {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.section2 .card .card-info p {
+  font-size: 0.8em;
+  font-weight: 300;
+  margin-bottom: 30%;
+}
+.section2 .card .card-info .para-black {
+  margin-bottom: 12%;
+}
+.section2 .card .card-info #countries {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #fff;
+  transition: all ease-in 0.3s;
+}
+.section2 .card .card-info #countries:hover {
+  color: #ababab;
+}
+.section2 .card .card-info .countries-green {
+  background-color: #00ccb1;
+}
+.section2 .card .card-info .countries-blue {
+  background-color: #3d83df;
+}
+.section2 .card .card-info .countries-black {
+  background-color: #1b2734;
+  margin-bottom: 5%;
+}
+.section2 .green-card {
+  background-color: #00ccb1;
+}
+.section2 .blue-card {
+  background-color: #3d83df;
+}
+.section2 .black-card {
+  background-color: #1b2734;
+}
+
+.section3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  padding: 0 10%;
+  margin: auto;
+}
+.section3 p {
+  width: 25%;
+  color: #00b39b;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}
+.section3 .sponsers {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.section3 .sponsers .sponsers-logo {
+  width: 23%;
+  margin: 5%;
+}
+.section3 .sponsers .sponsers-logo img {
+  width: 100%;
+}
+
+.section4 {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  grid-template-rows: 4fr;
+  background-color: #d0faf4;
+  padding: 7% 3%;
+  position: relative;
+  margin-top: 8%;
+}
+.section4 .section4-info {
+  grid-column: 1/2;
+  width: 85%;
+  margin-left: 10%;
+}
+.section4 .section4-info .info {
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+}
+.section4 .section4-info h3 {
+  font-size: 1.8em;
+  font-weight: 300;
+  padding-bottom: 5%;
+  color: #00b39b;
+}
+.section4 .section4-info p {
+  color: #747474;
+}
+.section4 .section4-info .sect-4-img {
+  width: 97%;
+}
+.section4 .section4-info .sect-4-img img {
+  width: 40%;
+  position: absolute;
+  bottom: 0px;
+}
+.section4 .section4-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: 50px 200px 50px 200px;
+  grid-column: 2/3;
+  grid-row: 1/5;
+  text-align: center;
+  margin: auto;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 10px;
+}
+.section4 .section4-grid .card {
+  background-color: #fff;
+  padding: 13% 10%;
+  height: 12em;
+  width: 85%;
+}
+.section4 .section4-grid .card i {
+  font-size: 1.5em;
+  color: #00b39b;
+}
+.section4 .section4-grid .card h3 {
+  font-size: 1.6em;
+  font-weight: 300;
+  color: #00b39b;
+}
+.section4 .section4-grid .card p {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #747474;
+}
+.section4 .section4-grid .section4-card1 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.section4 .section4-grid .section4-card2 {
+  grid-column: 2;
+  grid-row: 1/2;
+}
+.section4 .section4-grid .section4-card3 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.section4 .section4-grid .section4-card4 {
+  grid-column: 2;
+  grid-row: 3/4;
 }/*# sourceMappingURL=style.css.map */
