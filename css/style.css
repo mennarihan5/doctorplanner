@@ -19,7 +19,7 @@ header .navbar .main-logo img {
 }
 header .navbar .nav-list {
   display: flex;
-  justify-content: space-betweeen;
+  justify-content: space-between;
   align-items: center;
   width: 25%;
 }
@@ -37,6 +37,25 @@ header .navbar .nav-list .nav-item .about-us-color {
   color: #00b39b;
 }
 
+@media (max-width: 576px) {
+  header .navbar {
+    justify-content: space-between;
+  }
+  header .navbar .nav-list {
+    flex-direction: column;
+    align-items: start;
+  }
+  header .navbar .nav-list::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    font: var(--fa-bars-solid);
+    content: "\f0c9";
+    color: #333;
+  }
+}
 main .section1 {
   margin: 7% auto;
   width: 90%;
@@ -52,6 +71,10 @@ main .section1 .logo-sm {
 }
 main .section1 .logo-sm img {
   width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+main .section1 .logo-sm img:hover {
+  transform: rotate(-0.25turn);
 }
 main .section1 .main-title {
   grid-column: 1/4;
@@ -266,4 +289,103 @@ main .section1 .main-description .desc2 {
 .section4 .section4-grid .section4-card4 {
   grid-column: 2;
   grid-row: 3/4;
+}
+
+.section5 {
+  text-align: center;
+  width: 50%;
+  margin: 8% auto;
+}
+.section5 h3 {
+  font-weight: 300;
+  font-size: 2em;
+  color: #00b39b;
+  letter-spacing: 0.5px;
+}
+.section5 p {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #747474;
+}
+
+.section6 .countries-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+  gap: 15px;
+}
+.section6 .countries-cards .country {
+  width: 48%;
+}
+.section6 .countries-cards .country img {
+  width: 100%;
+}
+.section6 .countries-cards .country .country-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #747474;
+}
+.section6 .countries-cards .country .country-info h4 {
+  font-weight: 400;
+}
+.section6 .countries-cards .country .country-info .country-btn {
+  border: none;
+  background-color: #3d83df;
+  padding: 3% 6%;
+  border-radius: 0.5em;
+  color: #fff;
+  cursor: pointer;
+}
+.section6 .countries-cards .country .country-info .country-btn:hover {
+  color: #ababab;
+}
+.section6 .countries-cards .last-country {
+  margin: auto;
+}
+
+.section7 {
+  width: 60%;
+  height: 7em;
+  margin: 7% auto;
+  position: relative;
+}
+.section7 h3 {
+  font-size: 1.8em;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #333;
+}
+.section7 .openings-btn {
+  margin-top: 2%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #3d83df;
+  border: none;
+  padding: 2% 4%;
+  border-radius: 0.5em;
+  color: #fff;
+  cursor: pointer;
+}
+.section7 .openings-btn:hover {
+  color: #ababab;
+}
+
+footer .footer-info {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+  color: #ababab;
+}
+footer .footer-info .blue {
+  color: #337ab7;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

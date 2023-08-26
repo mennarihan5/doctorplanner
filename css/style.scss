@@ -38,7 +38,7 @@ header .navbar {
         }
     }
     .nav-list {
-        @include flexRow(space-betweeen);
+        @include flexRow(space-between);
         width: 25%;
         .nav-item {
             margin-right: 6%;
@@ -52,6 +52,27 @@ header .navbar {
             .about-us-color {
                 color: $primaryColor1;
             }
+        }
+    }
+}
+// HEADER MEDIA
+@media(max-width:576px) {
+    header .navbar {
+        justify-content: space-between;
+        .nav-list {
+            // display: none;
+            flex-direction: column;
+            align-items: start;
+        }
+        .nav-list::before {
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            font: var(--fa-bars-solid);
+            content: "\f0c9";
+            color: #333;
         }
     }
 }
@@ -70,7 +91,12 @@ main .section1 {
         width: 4%;
         img {
             width: 100%;
+            transition: all ease-in-out 0.3s;
+            &:hover {
+                transform: rotate(-0.25turn);
+            }
         }
+        
     }
     .main-title {
         grid-column: 1/4;
@@ -178,11 +204,11 @@ main .section1 {
     margin: auto;
 
     p {
-       width: 25%;
-       color: $primaryColor1;
-       font-size: 1.6em;
-       font-weight: 300;
-       letter-spacing: 0.8px;
+        width: 25%;
+        color: $primaryColor1;
+        font-size: 1.6em;
+        font-weight: 300;
+        letter-spacing: 0.8px;
     }
     .sponsers {
         @include flexRow(space-evenly);
@@ -285,5 +311,104 @@ main .section1 {
 
     }
 }
+// SECTION 5
+.section5 {
+    text-align: center;
+    width: 50%;
+    margin: 8% auto;
+    h3 {
+        font-weight: 300;
+        font-size: 2em;
+        color: $primaryColor1;
+        letter-spacing: 0.5px;
+    }
+    p {
+        font-size: 0.9em;
+        font-weight: 400;
+        color: $mainTextColor;
+    }
+}
 
+// SECTION 6
+.section6 {
+    .countries-cards {
+        @include flexRow(space-between);
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+        gap: 15px;
+        .country {
+            width: 48%;
+            img {
+                width: 100%
+            }
+            .country-info {
+                @include flexRow(space-between);
+                width: 100%;
+                font-family: 'Roboto', sans-serif;
+                color: $mainTextColor;
+                h4 {
+                    font-weight: 400;
+                }
+                .country-btn {
+                    border: none;
+                    background-color: $countryBtn;
+                    padding: 3% 6%;
+                    border-radius: 0.5em;
+                    color: $cardTextColor;
+                    cursor: pointer;
+                    &:hover {
+                        color: $footerColor1;
+                    }
+                }    
+            }
+        }
+        .last-country {
+            margin: auto;
+        }
+    }
+}
+// SECTION 7
+.section7 {
+    width: 60%;
+    height: 7em;
+    margin: 7% auto;
+    position: relative;
+    h3 {
+        font-size: 1.8em;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: #333;
+    }
+    .openings-btn {
+        margin-top: 2%;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: $countryBtn;
+        border: none;
+        padding: 2% 4%;
+        border-radius: 0.5em;
+        color: $cardTextColor;
+        cursor: pointer;
+        &:hover {
+            color: $footerColor1;
+        }
+    }
+}
+// FOOTER
+footer {
+    .footer-info {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8em;
+        text-align: center;
+        color: $footerColor1;
+        .blue {
+            color: $footerColor2;
+            cursor: pointer;
+        }
+    }
+}
 
